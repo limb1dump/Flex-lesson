@@ -1,0 +1,423 @@
+/*Обнуление*/
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family:inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+/*--------------------*/
+
+
+
+
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    overflow: hidden;
+}
+
+.content {
+    flex: 1 1 auto;
+}
+
+.container {
+    max-width: 1180px;
+    margin: 0px auto;
+}
+
+
+@media (max-width:1200px) {
+    .container {
+        max-width: 970px;
+    }
+}
+
+@media (max-width:992px) {
+    .container {
+        max-width: 750px;
+    }
+}
+
+@media (max-width:767px) {
+    .container {
+        max-width: none;
+    }
+    .hello__body {
+        padding-bottom: 30px ;
+    }
+}
+
+/* Почему не работает паддинг? */
+@media (max-width:767px) {
+    .hello__row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+    }
+}
+
+.hello {
+    background-color: #445162;
+}
+
+.hello__row {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 0;
+}
+
+.hello__body {}
+
+.hello__title {
+    font-size: 59px;
+    color: white;
+    padding-bottom: 25px ;
+}
+
+.hello__list {
+    font-size: 20px;
+    color: white;
+}
+
+.hello__list li {
+    background: url(../img/check-icon.png) 0 1px no-repeat;
+    margin: 15px 0px 0px 0px;
+    padding-left: 35px;
+    padding-right: 10px;
+}
+
+.hello__img {}
+
+
+
+
+
+
+.title {
+    font-size: 30px;
+    color: #445161;
+}
+
+
+
+
+
+@media (max-width:992px) {
+
+    .flexbox-about__row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .flexbox-about__body {
+        padding: 30px;
+        
+        order: 1;
+    }
+    
+    .flexbox-about__img {
+        order: 2;
+    }
+
+    .flexbox-about__title {
+        text-align: center;
+    }
+}
+
+@media (max-width:767px) {
+    .flexbox-about__row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .flexbox-about__body {
+        padding: 30px;
+        
+    }
+
+    .flexbox-about__title {
+        text-align: center;
+    }
+    
+}
+
+.flexbox-about {}
+
+.flexbox-about__row {
+    display: flex;
+    padding: 50px 0;
+}
+
+.flexbox-about__img {
+    margin-right: 38px;
+}
+
+.flexbox-about__body {}
+
+.flexbox-about__title {
+    font-size: 30px;
+    margin-bottom: 36px;
+}
+
+.flexbox-about__text p{
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 25px;
+}
+
+.flexbox-about__text p:last-child {
+    margin-bottom: 0;
+}
+
+
+@media (max-width:992px) {
+
+    .flex-columns__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 30px;
+    }
+}
+
+@media (max-width:767px) {
+
+    .flex-columns__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 30px;
+    }
+
+}
+
+
+.flex-columns {
+    background-color: rgb(230, 230, 230);
+}
+
+.flex-columns__body {
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    align-items: center;
+}
+
+/* Почему колонки не выстраивыались по 2,
+но как тольео добавил флекс тайтлу, тут же стало, как нужно и осталось, как нужно даже после удаления флекса с тайтла. Что это за колдунство? */
+
+.flex-columns__title {
+    padding-bottom: 30px;
+}
+
+.flex-columns__content {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -8px;
+}
+
+.flex-columns__column {
+    display: flex;
+    flex: 0 1 50%;
+    padding: 0 8px 30px 8px ;
+}
+
+.flex-columns__column-body {
+    padding-left: 15px;
+}
+
+
+/* Почему-то стили тут применяются только если продублировать класс */
+.flex-columns__column-title {
+    font-size: 24px;
+    color: #445161;
+    padding-bottom: 15px;
+}
+
+
+.flex-columns__column-text {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.flex-columns__column-img {}
+
+
+
+
+
+
+.social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container__social {
+    max-width: 990px;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ТА ЖЕ ХРЕНЬ! Почему колонки не выстраивыались по 2,
+но как тольkо добавил флекс тайтлу, тут же стало, как нужно и осталось, как нужно даже после удаления флекса с тайтла. Что это за колдунство? */
+.social__title {
+    padding: 0 0 30px 0;
+}
+
+.social__content {
+    display: flex;
+    margin: 0 -22.5px;
+}
+
+.social__card {
+    flex: 0 1 33%;
+    padding: 0 22.5px;
+}
+
+.social__card-body  {
+    display: flex;
+    flex-direction: column;
+    background-color: #445161;
+    border-radius: 5px;
+    min-height: 100%;
+}
+
+.social__card-title {
+    font-size: 24px;
+    color: white;
+    padding: 19px 0px;
+    text-transform: uppercase;
+    text-align: center;
+} 
+
+.social__card-call {
+    font-size: 40px;
+    color: #445162;
+    background-color: white;
+    padding: 25px 0;
+    border: 1px solid #445162;
+    text-align: center;
+}
+
+.social__card-text {
+    font-size: 14px;
+    line-height: 24px;
+    color: white;
+    padding: 20px 20px 0 20px;
+    flex: 1 1 auto;
+    
+}
+
+.social__card-text p {
+    padding: 0 0 15px 0;
+}
+
+.social__card-text p:last-child {
+    padding: 0;
+}
+
+.social__card-button {
+    margin: 20px;
+    background-color: white;
+    border-radius: 5px;
+}  
+
+.social__button-text {
+    font-size: 18px;
+    color: #445161;
+    padding: 15px 0;
+    font-weight: 700;
+    text-align: center;
+}
+
+/* .container__social {
+    max-width: 400px;
+} 
+начал работать, если ставить медиа запрос после изначального значения */
+@media (max-width:767px) {
+
+    .social__content {
+        display: flex;
+        flex-direction: column; 
+          
+    }
+
+    .container__social {
+        max-width: 400px;
+    }
+
+    .social__title {
+        text-align: center;
+    }
+
+    .social__card {
+        padding: 0 0 30px 0;
+        flex: 1;
+    }
+
+}
+
+
+
+.footer {
+    background-color: rgb(230, 230, 230);
+}
+
+.footer__row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 65px;
+    max-width: 100%;
+}
+
+.footer__text {
+    color: #445162;
+    font-size: 12px;
+}
+
+ 
